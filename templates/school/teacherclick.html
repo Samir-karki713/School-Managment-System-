@@ -1,0 +1,33 @@
+{% extends 'school/homebase.html' %}
+{% block content %}
+
+<div class="container py-5">
+  <div class="text-center mb-5">
+    <h1 class="fw-bold display-5">Teacher Portal</h1>
+    <p class="text-muted fs-5">Welcome to Samir Aadarvhut Bidhyalaya. Please choose an option to continue.</p>
+  </div>
+
+  <div class="row justify-content-center g-4">
+    <div class="col-md-5">
+      <div class="card shadow-lg border-0 h-100 text-center p-4">
+        <div class="card-body">
+          <h3 class="card-title mb-3">Apply for Teaching</h3>
+          <p class="card-text">Start your journey with us by applying for a teaching position.</p>
+          <a href="teachersignup" class="btn btn-danger btn-lg mt-3">Apply Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-5">
+      <div class="card shadow-lg border-0 h-100 text-center p-4">
+        <div class="card-body">
+          <h3 class="card-title mb-3">Existing Teacher</h3>
+          <p class="card-text">Already a member of our faculty? Login to access your dashboard.</p>
+          <a href="teacherlogin" class="btn btn-success btn-lg mt-3">Login</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

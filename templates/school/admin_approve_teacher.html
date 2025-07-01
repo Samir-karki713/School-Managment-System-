@@ -1,0 +1,72 @@
+{% extends 'school/adminbase.html' %}
+{% block content %}
+
+<!-- Styles for the table -->
+<style>
+  .section-title {
+    text-align: center;
+    margin-top: 50px;
+    font-weight: 600;
+    font-size: 1.8rem;
+  }
+
+  .table-responsive {
+    margin-top: 40px;
+  }
+
+  .action-icons a {
+    margin-right: 8px;
+  }
+
+  .btn-xs {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
+  }
+</style>
+
+<div class="container py-5">
+  <h2 class="section-title">Pending Teacher Approvals</h2>
+
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover align-middle">
+      <thead class="table-dark">
+        <tr>
+          <th>Name</th>
+          <th>Contact</th>
+          <th>Salary</th>
+          <th>Joining Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for t in teachers %}
+        <tr>
+          <td>{{ t.get_name }}</td>
+          <td>{{ t.mobile }}</td>
+          <td>{{ t.salary }}</td>
+          <td>{{ t.joindate }}</td>
+          <td class="action-icons">
+            <a class="btn btn-success btn-xs" href="{% url 'approve-teacher' t.id %}" title="Approve">
+              <i class="fas fa-check"></i>
+            </a>
+            <a class="btn btn-danger btn-xs" href="{% url 'delete-teacher' t.id %}" title="Delete">
+              <i class="fas fa-trash-alt"></i>
+            </a>
+          </td>
+        </tr>
+        {% empty %}
+        <tr>
+          <td colspan="5" class="text-center">No teachers awaiting approval.</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Font Awesome 6 (Modern Icons) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+{% endblock content %}

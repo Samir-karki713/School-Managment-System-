@@ -1,0 +1,70 @@
+{% load tz %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Footer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Font Awesome (Latest version recommended) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    footer {
+      background-color: #000;
+      color: #fff;
+      padding: 2rem 0;
+      text-align: center;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      margin: 0 10px;
+      padding: 12px;
+      font-size: 20px;
+      color: #fff;
+      border-radius: 50%;
+      transition: 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      opacity: 0.8;
+      transform: scale(1.1);
+    }
+
+    .fa-facebook { background-color: #3B5998; }
+    .fa-twitter { background-color: #55ACEE; }
+    .fa-instagram { background-color: #E1306C; }
+    .fa-whatsapp { background-color: #25D366; }
+
+    .footer-bottom {
+      margin-top: 1rem;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/share/16aVg4tBe1/" 
+   class="fab fa-facebook" 
+   target="_blank" 
+   rel="noopener noreferrer">
+</a>
+
+      <a href="https://x.com/Samir_karki661?t=-8R_uySsCSCOXIUH0GwSOw&s=09" class="fab fa-twitter" target="_blank" ></a>
+      <a href="https://www.instagram.com/samirr_karkiii661?igsh=MXBvOXZlZTBmZDRoeg==" class="fab fa-instagram" target="_blank"></a>
+      <a href=" https://wa.me/9779707628521 " target="_blank" class="fab fa-whatsapp"></a>
+    </div>
+
+    <div class="footer-bottom mt-3">
+      &copy; {% now "Y" %} — Developed by <strong>Samir Karki</strong>
+    </div>
+  </footer>
+
+</body>
+
+</html>
